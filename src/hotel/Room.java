@@ -11,13 +11,13 @@ public class Room {
     private int capacity;
     private boolean isBooked;
 
+    // konstruktorn
     public Room(String roomNr, int capacity) {
         this.roomNr = roomNr;
         this.capacity = capacity;
         // standard värde
         this.isBooked = false;
     }
-
 
     public String getRoomNr() {
         return roomNr;
