@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         int score = calculateScore("Helena", 200);
         System.out.println(score);
-
+        System.out.println("ForkTest");
         int newScore = calculateScore(300);
         System.out.println(newScore);
 
