@@ -4,8 +4,8 @@ public class Suite extends Room{ // extends = att subklassen Suite ärver egensk
     private boolean hasJacuzzi;
 
     // konstruktorn
-    public Suite(String roomNr, int capacity, boolean hasJacuzzi) {
-        super(roomNr, capacity);
+    public Suite(String roomNr, int capacity, double pricePerNight, boolean hasJacuzzi) {
+        super(roomNr, capacity, pricePerNight);
         this.hasJacuzzi = hasJacuzzi;
     }
 

@@ -10,11 +10,13 @@ public class Room {
     private String roomNr;
     private int capacity;
     private boolean isBooked;
+    private double pricePerNight;
 
     // konstruktorn
-    public Room(String roomNr, int capacity) {
+    public Room(String roomNr, int capacity, double pricePerNight) { //lägger till double pricePerNight
         this.roomNr = roomNr;
         this.capacity = capacity;
+        this.pricePerNight = pricePerNight;
         // standard värde
         this.isBooked = false;
     }
@@ -27,6 +29,9 @@ public class Room {
         return capacity;
     }
 
+    public double getPricePerNight() {
+        return pricePerNight;
+    }
 
     public boolean isBooked() {
         return isBooked;
@@ -37,11 +42,17 @@ public class Room {
     }
 
     // metod för att boka rum
-    public void bookRoom() {
-        if(!isBooked) {
+    public void bookRoom(int nights) {
+        if(!isBooked  && roomNr.equals("101")) {
+            calculatePricePerNight(nights, 1000);
             isBooked = true;
             System.out.println("Room " + roomNr + " is now booked.");
-        } else {
+        } else if (!isBooked && roomNr.equals("201")) {
+            calculatePricePerNight(nights, 5000);
+            isBooked = true;
+            System.out.println("Room " + roomNr + " is now booked.");
+        }
+        else {
             System.out.println("Room " + roomNr + " is already booked.");
         }
     }
@@ -55,6 +66,11 @@ public class Room {
             System.out.println("Room " + roomNr + " is not booked.");
         }
     }
+    public void calculatePricePerNight(int nights, int pricePerNight) {
+        double totalCost = pricePerNight * nights;
+        System.out.println("Total cost: " + totalCost);
+    }
+
 
     // metod för att visa detaljer om rummet
 
@@ -70,6 +86,8 @@ public class Room {
     public void displayRoomDetails() {
         System.out.println("Room " + roomNr + " with capacity of " + capacity + " guests.");
     }
+
+
 }
 
 
