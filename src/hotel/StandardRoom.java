@@ -12,6 +12,6 @@ public class StandardRoom extends Room{ // extends = att subklassen StandardRoom
 
     @Override
     public void displayRoomDetails() {
-        System.out.println("Standard room with " + getRoomNr() + " nr and capacity of " + getCapacity() + " guests. Tv: " + (hasTv ? "Ja" : "Nej"));
+        System.out.println("Standard room " + getRoomNr() + ", with a price per night of " + getPricePerNight() + " Kr and capacity of " + getCapacity() + " guests. Tv: " + (hasTv ? "Ja" : "Nej"));
     }
 }

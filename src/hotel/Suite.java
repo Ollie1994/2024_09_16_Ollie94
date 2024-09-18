@@ -11,6 +11,6 @@ public class Suite extends Room{ // extends = att subklassen Suite ärver egensk
 
     @Override
     public void displayRoomDetails() {
-        System.out.println("Suit with " + getRoomNr() + " nr and capacity of " + getCapacity() + " guests. Jacuzzi: " + (hasJacuzzi ? "Ja" : "Nej"));
+        System.out.println("Suit " + getRoomNr() + ", with a price per night of " + getPricePerNight() + " Kr and capacity of " + getCapacity() + " guests. Jacuzzi: " + (hasJacuzzi ? "Ja" : "Nej"));
     }
 }
