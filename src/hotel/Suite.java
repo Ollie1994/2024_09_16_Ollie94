@@ -1,6 +1,6 @@
 package hotel;
 
-public class Suite extends Room{
+public class Suite extends Room{ // extends = att subklassen Suite ärver egenskaper och metoder från basklassen Room.
     private boolean hasJacuzzi;
 
     // konstruktorn

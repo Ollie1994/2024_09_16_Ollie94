@@ -1,6 +1,6 @@
 package hotel;
 
-public class StandardRoom extends Room{
+public class StandardRoom extends Room{ // extends = att subklassen StandardRoom ärver egenskaper och metoder från basklassen Room.
     // underklass
     private boolean hasTv;
 
