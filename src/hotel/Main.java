@@ -5,6 +5,8 @@ public class Main {
         // skapa ett objekt av Bookingservice så vi kan komma åt alla metoder
         BookingService bookingService = new BookingService();
 
+        Customer customer1   = new Customer("Robert Nilsson", "0704562345");
+
         StandardRoom room1 = new StandardRoom("101", 2, 1000, true);
         StandardRoom room2 = new StandardRoom("102", 2, 1000, true);
         StandardRoom room3 = new StandardRoom("103", 2, 1000, true);
