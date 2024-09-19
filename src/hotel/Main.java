@@ -34,9 +34,19 @@ public class Main {
                     System.out.println("Would you like to book room?");
                     String choice = sc.next();
                     if (choice.equals("yes")) {
-                        System.out.println("hello");
-                        bookingService.bookRoom("101", 2, "Göran Svensson", "0704562345");
-                    }
+                        System.out.println("please select room number");
+                        String roomNr = sc.next();
+                        sc.nextLine(); /// HÄR BARA FÖR ATT INTE SKIPPA INPUT ::::::::::
+                        System.out.println("please select name of booker");
+                        String name = sc.nextLine();
+                        System.out.println("please enter phoneNumber of booker");
+                        String phoneNumber = sc.next();
+                        System.out.println("please enter nights you will be staying");
+                        int nights = sc.nextInt();
+
+                        bookingService.bookRoom(roomNr, nights, name, phoneNumber);
+                    } // dem här inmatnignarna vill jag ha in i en arraylist för bokade rum som ajg sedan kan skriva ut
+                    // SKULLE behöva separera addRoom från BookingService och lägga till dem i någon för av "ADMIN"
                     else if (choice.equals("no")) {
 
                     }
