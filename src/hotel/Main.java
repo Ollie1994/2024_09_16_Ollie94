@@ -24,13 +24,28 @@ public class Main {
 //------------------------------------Input--------------------------------------
         while(true) {
             System.out.println("Menu");
-            System.out.println("1. Add/Remove room");
-            System.out.println("2. Add/Remove suite");
+            System.out.println("1. Book a room");
+            System.out.println("2. unbook a room");
             System.out.println("3. Add/Remove customer");
             System.out.println("4. Exit");
             int menuChoice = sc.nextInt();
             switch(menuChoice) {
                 case 1:
+                    System.out.println("Would you like to book room?");
+                    String choice = sc.next();
+                    if (choice.equals("yes")) {
+                        System.out.println("hello");
+                    }
+                    else if (choice.equals("no")) {
+
+                    }
+                    else {
+                        System.out.println("Invalid choice");
+                    }
+
+                case 4:
+                    return;
+
             }
         }
 
