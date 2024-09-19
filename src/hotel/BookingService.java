@@ -10,6 +10,12 @@ private List<Customer> customers = new ArrayList<>();  // lista med alla custume
         customers.add(customer); // lagt till en customer i arrayList
         System.out.println("Customer " + customer.getName() + " has been added to the system.");
     }
+    public void removeCustomer(Customer customer) { // metod för att tabort till en customer i listan
+        customers.remove(customer); // tagit bort en customer från arrayList
+        System.out.println("Customer " + customer.getName() + " has been removed from the system.");
+    }
+
+
 
 
 
