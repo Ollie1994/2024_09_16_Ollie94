@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookingService {
-
+//____________________________CUSTOMER_________________________________________________
+private List<Customer> customers = new ArrayList<>();  // lista med alla custumers
+    public void addCustomer(Customer customer) { // metod för att lägga till en customer i listan
+        customers.add(customer); // lagt till en customer i arrayList
+        System.out.println("Customer " + customer.getName() + " has been added to the system.");
+    }
 
 
 

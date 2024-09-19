@@ -15,6 +15,8 @@ public class Main {
 
         bookingService.addRoom(room1);
         bookingService.addRoom(suite1);
+        bookingService.addCustomer(customer1);
+
 
         System.out.println("---------------------");
 
