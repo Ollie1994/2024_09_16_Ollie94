@@ -8,7 +8,7 @@ public class Customer {
     public Customer(String name, String phoneNumber) {
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.guest = false; // vill ha detta bli true när gästen bor på hotellet.
+        this.guest = false; // (standard värde) vill ha detta bli true när gästen bor på hotellet.
         // använd samma sätt som i Room klass.
     }
 
