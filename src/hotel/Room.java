@@ -20,26 +20,6 @@ public class Room {
         this.isBooked = false;
     }
 
-    public String getRoomNr() {
-        return roomNr;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public double getPricePerNight() {
-        return pricePerNight;
-    }
-
-    public boolean isBooked() {
-        return isBooked;
-    }
-
-    public void setBooked(boolean booked) {
-        isBooked = booked;
-    }
-
     // metod för att boka rum
     public void bookRoom(int nights) {
         if(!isBooked  && roomNr.equals("101")) {
@@ -79,6 +59,26 @@ public class Room {
     public void displayRoomDetails() {
         System.out.println("Room " + roomNr + " with capacity of " + capacity + " guests.");
     }
+
+
+// GETTERS OCH SETTERS _________________________________________________________________________________
+    public String getRoomNr() {
+        return roomNr;
+    }
+    public int getCapacity() {
+        return capacity;
+    }
+    public double getPricePerNight() {
+        return pricePerNight;
+    }
+    public boolean isBooked() {
+        return isBooked;
+    }
+    public void setBooked(boolean booked) {
+        isBooked = booked;
+    }
+
+
 
 
 }
