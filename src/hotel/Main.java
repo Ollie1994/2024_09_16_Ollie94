@@ -9,11 +9,7 @@ public class Main {
         StandardRoom room2 = new StandardRoom("102", 2, 1000, true);
         StandardRoom room3 = new StandardRoom("103", 2, 1000, true);
 
-
         Suite suite1 = new Suite("201", 4, 5000, true);
-
-
-
 
         bookingService.addRoom(room1);
         bookingService.addRoom(suite1);

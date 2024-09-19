@@ -1,11 +1,10 @@
 package hotel;
-
 public class Room {
     // Room: basklassen, innehålla alla egenskaper och beetende som alla rum har gemensamt
     // StandardRoom och Suite: underklasser till Room + sina egna unika egenskaper
     // BookingService: hantera bokningar, tillgänglihet m.m.
-
     // markera man klassen abstract då kan man undvika att det går att skapa ett objekt av klassen.
+    BookingService bookingService = new BookingService();
 
     private String roomNr;
     private int capacity;
@@ -44,11 +43,11 @@ public class Room {
     // metod för att boka rum
     public void bookRoom(int nights) {
         if(!isBooked  && roomNr.equals("101")) {
-            calculatePricePerNight(nights, 1000);
+            bookingService.calculatePricePerNight(nights, 1000);
             isBooked = true;
             System.out.println("Room " + roomNr + " is now booked.");
         } else if (!isBooked && roomNr.equals("201")) {
-            calculatePricePerNight(nights, 5000);
+            bookingService.calculatePricePerNight(nights, 5000);
             isBooked = true;
             System.out.println("Room " + roomNr + " is now booked.");
         }
@@ -66,12 +65,6 @@ public class Room {
             System.out.println("Room " + roomNr + " is not booked.");
         }
     }
-    public void calculatePricePerNight(int nights, int pricePerNight) {
-        double totalCost = pricePerNight * nights;
-        System.out.println("Total cost: " + totalCost);
-    }
-
-
     // metod för att visa detaljer om rummet
 
     /*@Override
