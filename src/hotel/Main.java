@@ -35,6 +35,7 @@ public class Main {
                     String choice = sc.next();
                     if (choice.equals("yes")) {
                         System.out.println("hello");
+                        bookingService.bookRoom("101", 2, "Göran Svensson", "0704562345");
                     }
                     else if (choice.equals("no")) {
 

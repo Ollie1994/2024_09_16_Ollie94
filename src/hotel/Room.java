@@ -20,7 +20,24 @@ public class Room {
         this.isBooked = false;
     }
 
-    // metod för att boka rum
+    public void bookRoom(int nights, String name, String phoneNumber) {
+        if(!isBooked  && roomNr.equals("101")) {
+            bookingService.calculatePricePerNight(nights, 1000);
+            isBooked = true;
+            System.out.println("Room " + roomNr + " is now booked.");
+        } else if (!isBooked && roomNr.equals("201")) {
+            bookingService.calculatePricePerNight(nights, 5000);
+            isBooked = true;
+            System.out.println("Room " + roomNr + " is now booked.");
+        }
+        else {
+            System.out.println("Room " + roomNr + " is already booked.");
+        }
+    }
+
+
+    // metod för att boka rum // testar något nytt
+  /*
     public void bookRoom(int nights) {
         if(!isBooked  && roomNr.equals("101")) {
             bookingService.calculatePricePerNight(nights, 1000);
@@ -35,6 +52,8 @@ public class Room {
             System.out.println("Room " + roomNr + " is already booked.");
         }
     }
+
+   */
 
     // metod för att avboka rummet
     public void cancelBooking() {

@@ -5,14 +5,14 @@ public class Customer {
     private String phoneNumber;
     private boolean guest;
 
-    //_______________KONSTRUKTOR___________________________________________
+//_______________KONSTRUKTOR__________________________________________________________________________
     public Customer(String name, String phoneNumber) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.guest = false; // (standard värde) vill ha detta bli true när gästen bor på hotellet.
         // använd samma sätt som i Room klass.
     }
-    //_____________________________________________________________________
+//__________________________________________________________________________________________________________
 
 
 
