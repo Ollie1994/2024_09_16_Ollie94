@@ -56,7 +56,6 @@ public class Room {
         System.out.println("Room: " + getRoomNr() + "\n Capacity: " + getCapacity());
     }
 
-
     //-------------------------- G & S -----------------------------------------------------------------
     public double getPricePerNight() {return pricePerNight;}
     public void setPricePerNight(double pricePerNight) {this.pricePerNight = pricePerNight;}
@@ -67,38 +66,3 @@ public class Room {
     public boolean isBooked() {return isBooked;}
     public void setBooked(boolean booked) {isBooked = booked;}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

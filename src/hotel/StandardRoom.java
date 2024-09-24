@@ -1,4 +1,5 @@
 package hotel;
+
 public class StandardRoom extends Room {
 
     private boolean hasTv;
@@ -7,15 +8,6 @@ public class StandardRoom extends Room {
         super(pricePerNight, capacity, roomNr);
         this.hasTv = hasTv;
     }
-
-
-
-
-
-
-
-
-
 
     @Override
     public void displayRoomDetails() {
