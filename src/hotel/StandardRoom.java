@@ -1,17 +1,25 @@
 package hotel;
+public class StandardRoom extends Room {
 
-public class StandardRoom extends Room{ // extends = att subklassen StandardRoom ärver egenskaper och metoder från basklassen Room.
-    // underklass
     private boolean hasTv;
 
-    public StandardRoom(String roomNr, int capacity, double pricePerNight, boolean hasTv) {
-        super(roomNr, capacity, pricePerNight);
-        // super kallar på basklassens (Room) konstruktor först
+    public StandardRoom(double pricePerNight, int capacity, String roomNr, boolean hasTv) {
+        super(pricePerNight, capacity, roomNr);
         this.hasTv = hasTv;
     }
 
+
+
+
+
+
+
+
+
+
     @Override
     public void displayRoomDetails() {
-        System.out.println("Standard room " + getRoomNr() + ", with a price per night of " + getPricePerNight() + " Kr and capacity of " + getCapacity() + " guests. Tv: " + (hasTv ? "Ja" : "Nej"));
+        System.out.println("Room:" + getRoomNr() + "\n Capacity: " + getCapacity() +  "\n PricePerNight: " + getPricePerNight() + "\n TV: " + (hasTv ? "Yes" : "No"));
     }
+
 }

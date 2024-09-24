@@ -1,105 +1,71 @@
 package hotel;
 public class Room {
-    // Room: basklassen, innehålla alla egenskaper och beetende som alla rum har gemensamt
-    // StandardRoom och Suite: underklasser till Room + sina egna unika egenskaper
-    // BookingService: hantera bokningar, tillgänglihet m.m.
-    // markera man klassen abstract då kan man undvika att det går att skapa ett objekt av klassen.
-    BookingService bookingService = new BookingService();
-
-    private String roomNr;
-    private int capacity;
-    private boolean isBooked;
     private double pricePerNight;
+    private int capacity;
+    private String roomNr;
+    private boolean isBooked;
 
-    // konstruktorn
-    public Room(String roomNr, int capacity, double pricePerNight) { //lägger till double pricePerNight
-        this.roomNr = roomNr;
-        this.capacity = capacity;
+    public Room(double pricePerNight, int capacity, String roomNr) {
         this.pricePerNight = pricePerNight;
-        // standard värde
+        this.capacity = capacity;
+        this.roomNr = roomNr;
         this.isBooked = false;
     }
 
-    public void bookRoom(int nights, String name, String phoneNumber) {
-        if(!isBooked  && roomNr.equals("101")) {
-            bookingService.calculatePricePerNight(nights, 1000);
-            isBooked = true;
-            System.out.println("Room " + roomNr + " is now booked.");
-        } else if (!isBooked && roomNr.equals("201")) {
-            bookingService.calculatePricePerNight(nights, 5000);
-            isBooked = true;
-            System.out.println("Room " + roomNr + " is now booked.");
-        }
-        else {
-            System.out.println("Room " + roomNr + " is already booked.");
-        }
-    }
 
 
-    // metod för att boka rum // testar något nytt
-  /*
-    public void bookRoom(int nights) {
-        if(!isBooked  && roomNr.equals("101")) {
-            bookingService.calculatePricePerNight(nights, 1000);
-            isBooked = true;
-            System.out.println("Room " + roomNr + " is now booked.");
-        } else if (!isBooked && roomNr.equals("201")) {
-            bookingService.calculatePricePerNight(nights, 5000);
-            isBooked = true;
-            System.out.println("Room " + roomNr + " is now booked.");
-        }
-        else {
-            System.out.println("Room " + roomNr + " is already booked.");
-        }
-    }
 
-   */
 
-    // metod för att avboka rummet
-    public void cancelBooking() {
-        if (isBooked) {
-            isBooked = false;
-            System.out.println("The booking for room " + roomNr + " is cancelled.");
-        } else {
-            System.out.println("Room " + roomNr + " is not booked.");
-        }
-    }
-    // metod för att visa detaljer om rummet
 
-    /*@Override
-    public String toString() {
-        return "Room{" +
-                "roomNr='" + roomNr + '\'' +
-                ", capacity=" + capacity +
-                ", isBooked=" + isBooked +
-                '}';
-    }*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //----------------------------METHODS-------------------------------------------------------------------
     public void displayRoomDetails() {
-        System.out.println("Room " + roomNr + " with capacity of " + capacity + " guests.");
+        System.out.println("Room: " + getRoomNr() + "\n Capacity: " + getCapacity());
     }
 
 
-// GETTERS OCH SETTERS _________________________________________________________________________________
-    public String getRoomNr() {
-        return roomNr;
-    }
-    public int getCapacity() {
-        return capacity;
-    }
-    public double getPricePerNight() {
-        return pricePerNight;
-    }
-    public boolean isBooked() {
-        return isBooked;
-    }
-    public void setBooked(boolean booked) {
-        isBooked = booked;
-    }
-
-
-
-
+    //-------------------------- G & S -----------------------------------------------------------------
+    public double getPricePerNight() {return pricePerNight;}
+    public void setPricePerNight(double pricePerNight) {this.pricePerNight = pricePerNight;}
+    public int getCapacity() {return capacity;}
+    public void setCapacity(int capacity) {this.capacity = capacity;}
+    public String getRoomNr() {return roomNr;}
+    public void setRoomNr(String roomNr) {this.roomNr = roomNr;}
+    public boolean isBooked() {return isBooked;}
+    public void setBooked(boolean booked) {isBooked = booked;}
 }
 
 

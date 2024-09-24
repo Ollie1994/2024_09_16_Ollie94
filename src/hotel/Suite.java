@@ -1,16 +1,15 @@
 package hotel;
 
-public class Suite extends Room{ // extends = att subklassen Suite ärver egenskaper och metoder från basklassen Room.
-    private boolean hasJacuzzi;
+public class Suite extends Room {
+    private boolean hasjacuzzi;
 
-    // konstruktorn
-    public Suite(String roomNr, int capacity, double pricePerNight, boolean hasJacuzzi) {
-        super(roomNr, capacity, pricePerNight);
-        this.hasJacuzzi = hasJacuzzi;
+    public Suite(double pricePerNight, int capacity, String roomNr, boolean hasjacuzzi) {
+        super(pricePerNight, capacity, roomNr);
+        this.hasjacuzzi = hasjacuzzi;
     }
 
     @Override
     public void displayRoomDetails() {
-        System.out.println("Suit " + getRoomNr() + ", with a price per night of " + getPricePerNight() + " Kr and capacity of " + getCapacity() + " guests. Jacuzzi: " + (hasJacuzzi ? "Ja" : "Nej"));
+        System.out.println("Room:" + getRoomNr() + "\n Capacity: " + getCapacity() +  "\n PricePerNight: " + getPricePerNight() + "\n Jacuzzi: " + (hasjacuzzi ? "Yes" : "No"));
     }
 }
