@@ -1,4 +1,7 @@
 package hotel;
+
+import java.time.LocalDate;
+
 public class Room {
     private double pricePerNight;
     private int capacity;
@@ -17,41 +20,30 @@ public class Room {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //----------------------------METHODS-------------------------------------------------------------------
+    //Detta under kan vara fel
+    public boolean isAvailable(LocalDate checkInDate, LocalDate checkOutDate, LocalDate existingCheckInDate, LocalDate existingCheckOutDate) {
+        return checkInDate.isBefore(existingCheckInDate) && checkOutDate.isBefore(existingCheckOutDate) || checkInDate.isAfter(existingCheckInDate) && checkOutDate.isAfter(existingCheckOutDate);
+    }
+    public double calculatePrice(int nights) {
+        return pricePerNight * nights;
+    }
+    public void bookRoom() {
+        if (!isBooked) {
+            isBooked = true;
+            System.out.println("Room: " + roomNr + " has been booked");
+        } else {
+            System.out.println("Room: " + roomNr + " is already booked");
+        }
+    }
+    public void cancelBooking() {
+        if (isBooked) {
+            isBooked = false;
+            System.out.println("The booking for room: " + roomNr + " has been cancelled");
+        } else {
+            System.out.println("Room: " + roomNr + " is not booked");
+        }
+    }
     public void displayRoomDetails() {
         System.out.println("Room: " + getRoomNr() + "\n Capacity: " + getCapacity());
     }

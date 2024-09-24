@@ -40,7 +40,10 @@ public class Booking {
         }
     }
     public int getNights () {
-     return checkInDate.getDayOfYear() - checkOutDate.getDayOfYear();
+        return checkInDate.getDayOfYear() - checkOutDate.getDayOfYear();
+    }
+    public String getRoomNumber() {
+        return room.getRoomNr();
     }
     public void displayBookingDetails() {
         System.out.println(
@@ -51,7 +54,7 @@ public class Booking {
                 "\nRoom: " + room);
     }
     public double getTotalPrice() {
-        double totalPrice = room.calculatePricePerNight(getNights());
+        double totalPrice = room.calculatePrice(getNights());
         if(getNights() > 5){
             totalPrice = totalPrice * 0.9;
         } else {
